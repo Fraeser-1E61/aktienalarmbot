@@ -38,7 +38,7 @@ def ki_analyse_fuer_aktie(symbol, delta, aktueller_preis, waehrung, firmenname):
         - Unternehmensnachrichten?
         - Makro-Wirtschaft (Zinsen, Inflation)?
         - Technische Faktoren?
-        Halte die Antwort kurz, sachlich und wie ein professioneller Finanzanalyst. Max. 3 Sätze.
+        Halte die Antwort kurz, sachlich und wie ein professioneller Finanzanalyst. Max. 5 Saetze.
         """
 
         completion = client.chat.completions.create(
