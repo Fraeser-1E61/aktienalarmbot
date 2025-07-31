@@ -42,7 +42,7 @@ def ki_analyse_fuer_aktie(symbol, delta, aktueller_preis, waehrung, firmenname):
         """
 
         completion = client.chat.completions.create(
-            model="qwen/qwen3-235b-a22b-2507:free",  # ✅ Öffentlich verfügbar & stark
+            model="qwen/qwen3-235b-a22b:free",  # ✅ Öffentlich verfügbar & stark
             messages=[{"role": "user", "content": prompt}]
         )
         return completion.choices[0].message.content.strip()
