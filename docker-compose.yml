@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  aktienbot:
+    build: .
+    container_name: aktienalarmbot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_TOKEN=
+      - DEINE_CHAT_ID=
+      - OPENROUTER_API_KEY=
+    volumes:
+      - ./aktien.json:/app/aktien.json
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
