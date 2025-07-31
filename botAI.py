@@ -33,12 +33,12 @@ def ki_analyse_fuer_aktie(symbol, delta, aktueller_preis, waehrung, firmenname):
         prompt = f"""
         Der Kurs von {firmenname} ({symbol}) ist um {delta:+.2f}% {'gefallen' if delta < 0 else 'gestiegen'}.
         Aktueller Kurs: {aktueller_preis} {waehrung}.
-        Nenne 2–3 mögliche Gründe für diese Bewegung – basierend auf typischen Marktfaktoren:
+        Nenne 2–4 mögliche Gründe für diese Bewegung – basierend auf typischen Marktfaktoren:
         - Sektorweite Korrektur?
         - Unternehmensnachrichten?
         - Makro-Wirtschaft (Zinsen, Inflation)?
         - Technische Faktoren?
-        Halte die Antwort kurz, sachlich und wie ein professioneller Finanzanalyst. Max. 5 Saetze.
+        Halte die Antwort kurz, sachlich und wie ein professioneller Finanzanalyst. Max. 5 Saetze.Und nur aud deutsch!!!
         """
 
         completion = client.chat.completions.create(
