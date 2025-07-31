@@ -43,9 +43,7 @@ def ki_analyse_fuer_aktie(symbol, delta, aktueller_preis, waehrung, firmenname):
 
         completion = client.chat.completions.create(
             model="qwen/qwen3-235b-a22b-2507:free",  # ✅ Öffentlich verfügbar & stark
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.7,
-            max_tokens=300
+            messages=[{"role": "user", "content": prompt}]
         )
         return completion.choices[0].message.content.strip()
     except Exception as e:
